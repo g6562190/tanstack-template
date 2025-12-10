@@ -32,7 +32,7 @@ export const Sidebar = ({
         className="flex items-center justify-center w-full gap-2 px-3 py-2 text-sm font-medium text-white rounded-lg bg-gradient-to-r from-orange-500 to-red-600 hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-orange-500"
       >
         <PlusCircle className="w-4 h-4" />
-        New Chat
+        新對話
       </button>
     </div>
 

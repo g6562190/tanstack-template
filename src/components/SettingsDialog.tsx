@@ -34,7 +34,7 @@ export function SettingsDialog({ isOpen, onClose }: SettingsDialogProps) {
       <div className="bg-gray-800 rounded-lg shadow-xl max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto" onClick={e => e.stopPropagation()}>
         <div className="p-6">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="text-2xl font-semibold text-white">Settings</h2>
+            <h2 className="text-2xl font-semibold text-white">設定</h2>
             <button
               onClick={handleClose}
               className="text-gray-400 hover:text-white focus:outline-none"
@@ -50,14 +50,14 @@ export function SettingsDialog({ isOpen, onClose }: SettingsDialogProps) {
             <div className="space-y-2">
               <div className="flex items-center justify-between mb-4">
                 <label className="block text-sm font-medium text-white">
-                  System Prompts
+                  系統提示詞
                 </label>
                 <button
                   onClick={() => setIsAddingPrompt(true)}
                   className="flex items-center gap-2 px-3 py-1.5 text-sm font-medium text-white bg-gradient-to-r from-orange-500 to-red-600 rounded-lg hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-orange-500"
                 >
                   <PlusCircle className="w-4 h-4" />
-                  Add Prompt
+                  新增提示詞
                 </button>
               </div>
 
@@ -67,13 +67,13 @@ export function SettingsDialog({ isOpen, onClose }: SettingsDialogProps) {
                     type="text"
                     value={promptForm.name}
                     onChange={(e) => setPromptForm(prev => ({ ...prev, name: e.target.value }))}
-                    placeholder="Prompt name..."
+                    placeholder="提示詞名稱..."
                     className="w-full px-3 py-2 text-sm text-white bg-gray-700 border border-gray-600 rounded-lg focus:border-orange-500 focus:ring-1 focus:ring-orange-500"
                   />
                   <textarea
                     value={promptForm.content}
                     onChange={(e) => setPromptForm(prev => ({ ...prev, content: e.target.value }))}
-                    placeholder="Enter prompt content..."
+                    placeholder="輸入提示詞內容..."
                     className="w-full h-32 px-3 py-2 text-sm text-white bg-gray-700 border border-gray-600 rounded-lg focus:border-orange-500 focus:ring-1 focus:ring-orange-500"
                   />
                   <div className="flex justify-end gap-2">
@@ -81,13 +81,13 @@ export function SettingsDialog({ isOpen, onClose }: SettingsDialogProps) {
                       onClick={() => setIsAddingPrompt(false)}
                       className="px-3 py-1.5 text-sm font-medium text-gray-300 hover:text-white focus:outline-none"
                     >
-                      Cancel
+                      取消
                     </button>
                     <button
                       onClick={handleAddPrompt}
                       className="px-3 py-1.5 text-sm font-medium text-white bg-gradient-to-r from-orange-500 to-red-600 rounded-lg hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-orange-500"
                     >
-                      Save Prompt
+                      儲存提示詞
                     </button>
                   </div>
                 </div>
@@ -121,7 +121,7 @@ export function SettingsDialog({ isOpen, onClose }: SettingsDialogProps) {
                 ))}
               </div>
               <p className="text-xs text-gray-400">
-                Create and manage custom system prompts. Only one prompt can be active at a time.
+                建立和管理自定義系統提示詞。同一時間只能啟用一個提示詞。
               </p>
             </div>
 
@@ -132,13 +132,13 @@ export function SettingsDialog({ isOpen, onClose }: SettingsDialogProps) {
               onClick={handleClose}
               className="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white focus:outline-none"
             >
-              Cancel
+              取消
             </button>
             <button
               onClick={handleClose}
               className="px-4 py-2 text-sm font-medium text-white rounded-lg bg-gradient-to-r from-orange-500 to-red-600 hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-orange-500"
             >
-              Close
+              關閉
             </button>
           </div>
         </div>

@@ -188,7 +188,7 @@ function Home() {
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),
         role: 'assistant' as const,
-        content: 'Sorry, I encountered an error generating a response. Please set the required API keys in your environment variables.',
+        content: '抱歉，生成回應時發生錯誤。請在環境變數中設定所需的 API 金鑰。',
       }
       await addMessage(conversationId, errorMessage)
     }
@@ -263,7 +263,7 @@ function Home() {
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),
         role: 'assistant' as const,
-        content: 'Sorry, I encountered an error processing your request.',
+        content: '抱歉，處理您的請求時發生錯誤。',
       }
       if (currentConversationId) {
         await addMessage(currentConversationId, errorMessage)
