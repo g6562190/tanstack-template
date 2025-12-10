@@ -14,7 +14,7 @@ export const LoadingIndicator = () => (
       </div>
       <div className="flex items-center gap-3">
         <div className="text-lg font-medium text-gray-400">
-          Thinking
+          思考中
         </div>
         <div className="flex gap-2">
           <div
